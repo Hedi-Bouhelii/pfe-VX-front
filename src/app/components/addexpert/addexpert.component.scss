@@ -1,0 +1,23 @@
+.card{
+    margin-top: 50px;
+    padding: 20px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.056);
+}
+input{
+    margin: 10px;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+}
+h1{
+    color: #939ca9;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.row{
+    display: flex !important;
+}
