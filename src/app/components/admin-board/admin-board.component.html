@@ -46,7 +46,7 @@
                     {{agence.status}}
                 </td>
                 <td class="px-6 py-4" *ngIf="(agence.file)">
-                    <button (click)="downloadFile(agence.file)">download</button> </td>
+                    <button (click)="downloadFile(agence.file)"><i class="far fa-file-download"></i></button> </td>
                     <td id="not" class="px-6 py-4" *ngIf="!(agence.file)">
                         did not upload file </td>
                 <td class="px-6 py-4 text-right">
