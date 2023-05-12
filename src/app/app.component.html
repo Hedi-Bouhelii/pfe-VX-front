@@ -68,7 +68,9 @@
     </div>
   </nav>
    -->
-
+<app-expert-board *ngIf="isLoggedIn && showModeratorBoard"></app-expert-board>
+<app-admin-board *ngIf="isLoggedIn && showAdminBoard"></app-admin-board>
+<app-agence-board *ngIf="isLoggedIn && showAgenceBoard"></app-agence-board>
 <app-user-board *ngIf="isLoggedIn && showUserBoard"></app-user-board>
 <div class="mt-6 outlet">
     <router-outlet></router-outlet>

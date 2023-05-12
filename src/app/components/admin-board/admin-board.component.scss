@@ -1,7 +1,43 @@
-table{
-    background-color: rgb(218, 218, 218) !important;
-}
 #not {
     color: 	#DC3545;
 
 }
+a.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+.alert{
+    background-color: 	#DC3545;
+    color: white;
+    position: absolute;
+    top: 0;
+    border-radius: 0;
+    text-align: center;
+    text-decoration: underline;
+}  
+i{
+  font-size: 20px;
+}
+#side{
+  background-color: #eaf3fa !important;
+}
+a{
+  color: #7499f1;
+  transition: background-color 0.25s;
+}
+a:hover{
+  text-decoration: none;
+  background-color: #2b468b;
+  color: white;
+  i{
+    color: white;
+  }
+}
+table{
+    text-align: center;
+    position: relative;
+    left: 150px;
+    
+}
+

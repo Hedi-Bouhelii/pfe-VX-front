@@ -10,6 +10,7 @@ import { AdminBoardComponent } from './components/admin-board/admin-board.compon
 import { ProfileComponent } from './components/profile/profile.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { AddexpertComponent } from './components/addexpert/addexpert.component';
+import { ListAgenceComponent } from './components/list-agence/list-agence.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -17,14 +18,15 @@ const routes: Routes = [
   {path:'user',component:UserBoardComponent,children:[
     {path:'dashuser',component:UserDashComponent,outlet:'userBoard'},
   ]},
-  {path:'agence', component:AgenceBoardComponent,children:[
-    {path:'addExpert',component:AddexpertComponent,outlet:'agenceBoard'}
-  ]},
+  {path:'agence', component:AgenceBoardComponent},
+  {path:'addExpert',component:AddexpertComponent},
+
   {path:'expert',component:ExpertBoardComponent},
   {path:'admin',component:AdminBoardComponent},
   {path:'profile',component:ProfileComponent},
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path:'setting', component:SettingsComponent},
+  {path:'listAgence', component:ListAgenceComponent}
   
 ];
 

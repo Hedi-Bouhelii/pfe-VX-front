@@ -1,19 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Agence } from '../../modals/Agence';
+import { Agence } from 'src/app/modals/Agence';
 import { ApiService } from 'src/app/services/api.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
-  selector: 'app-admin-board',
-  templateUrl: './admin-board.component.html',
-  styleUrls: ['./admin-board.component.scss']
+  selector: 'app-list-agence',
+  templateUrl: './list-agence.component.html',
+  styleUrls: ['./list-agence.component.scss']
 })
-export class AdminBoardComponent implements OnInit {
+export class ListAgenceComponent implements OnInit {
 
   constructor(private authService:AuthService,private storageService:StorageService, private api:ApiService,private http : HttpClient) { }
-
   agences : Agence[] = [];
   ngOnInit(): void {
     this.api.getAllAgence().subscribe({
@@ -27,19 +26,6 @@ this.agences = data;   },
 activate(id:any) {
 console.log(id)
 }
-
- logout(): void {
-    this.authService.logout().subscribe({
-      next: res => {
-        console.log(res);
-        this.storageService.clean();
-        window.location.reload();
-      },
-      error: err => {
-        console.log(err);
-      }
-    });
-  }
 
   downloadFile(path: string){
     const index = path.indexOf("assets\\");
@@ -56,5 +42,6 @@ console.log(id)
       link.click();
   })
   }
+
 
 }

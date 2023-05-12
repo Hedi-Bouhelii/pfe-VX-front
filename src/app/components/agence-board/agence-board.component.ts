@@ -11,11 +11,11 @@ import { StorageService } from 'src/app/services/storage.service';
 export class AgenceBoardComponent implements OnInit {
 
   constructor(private authService:AuthService,private storageService:StorageService,private http:HttpClient) { }
-  activated = this.storageService.getAgence().activated;
+  activated = true;
   ngOnInit(): void {
    
   }
-
+ testName='ahmed'
 
 
   logout(): void {

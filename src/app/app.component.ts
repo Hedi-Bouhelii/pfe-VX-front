@@ -16,6 +16,7 @@ export class AppComponent {
   showModeratorBoard = false;
   showUserBoard= false;
   showHome = false;
+  showAdminBoard = false;
   firstName?: string;
   name?: string;
   email?: string;
@@ -45,7 +46,8 @@ export class AppComponent {
         this.showHome = true;
         const user = this.storageService.getAdmin();
         this.email = user.email;
-        this.router.navigate(['/admin'])
+        this.showAdminBoard = true
+        this.router.navigate(['/listAgence'])
       }
       
       if (this.role == "EXPERT"){

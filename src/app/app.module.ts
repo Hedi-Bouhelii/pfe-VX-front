@@ -23,6 +23,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
 import { AddexpertComponent } from './components/addexpert/addexpert.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import { ListAgenceComponent } from './components/list-agence/list-agence.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import {MatSelectModule} from '@angular/material/select';
     ProfileComponent,
     SettingsComponent,
     FileUploadComponent,
-    AddexpertComponent
+    AddexpertComponent,
+    ListAgenceComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatSidenavModule,
     MatSlideToggleModule,
     CommonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
